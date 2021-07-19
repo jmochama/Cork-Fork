@@ -12,14 +12,21 @@
     //checking whether the query excecuted successfully
     if($res==true)
     {
-        //admin deleted successfully
-        echo "Admin deleted";
+       
+       //session for displaying the message
+       $_SESSION['delete'] = "<div class='success'>Admin Deleted Successfully.</div>";
+       
+       //redirect to Manage Admin Page
+       header('location:'.SITEURL.'admin/manage-admin.php');
+
        
     }
     else{
 
          //failed to delete admin
-         echo "Failed to delete Admin ";
+        // echo "Failed to delete Admin ";
+        $_SESSION['delete'] = "<div class='error'>Failed to delete Admin. Try Again Later.</div>";
+        header('location:'.SITEURL.'admin/manage-admin.php');
     }
     //redirect page to manage-admin page with message.
 

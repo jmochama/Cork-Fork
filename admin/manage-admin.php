@@ -11,6 +11,13 @@
                             echo $_SESSION['add'];//add session message
                             unset($_SESSION['add']);//remove session message
                         }
+                        
+                            if(isset($_SESSION['delete']))
+                            {
+                                echo $_SESSION['delete'];
+                                unset($_SESSION['delete']);
+                            }
+                        
                     
                     ?>
                     <br /><br/><br/>

@@ -73,7 +73,7 @@
               
         // echo ("Data Inserted");
         // Session Variable to Display Message
-        $_SESSION['add'] = "Admin Added Successfuly";
+        $_SESSION['add'] = "<div class = 'success'>Admin Added Successfuly</div>";
         //Redirect Page to Manage Admin
         header("location:".SITEURL.'admin/manage-admin.php');
      
